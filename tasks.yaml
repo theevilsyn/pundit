@@ -1,0 +1,977 @@
+# Task Set 1 : hello, mapping, multiply, allorany, nlists, ginortS, athletesort
+
+hello:
+    name: Hello World
+    desc: Prints Hello World
+    tags:
+        - programming
+    value: 10
+    flageval: no
+    language: python
+    maxlines: 0
+    allowed: None
+    delimiter: !!str " "
+    testcases:
+        sample:
+           "": "Hello World!\n"
+        input:
+            - []
+        output:
+            - [Hello World!]
+
+mapping:
+    name: Mapping
+    desc: Print the given numbers as a list.
+    tags:
+        - programming
+    value: 90
+    flageval: no
+    language: python
+    allowed: None
+    maxlines: 0
+    delimiter: !!str "\n"
+    testcases:
+        sample:
+            
+        input:
+            - ['88 1203 85 146 170 109 1224 237 747']
+            - ['1538 694 574 1546 363 245 1515 1342']
+            - ['1583 582 587 1709 860 108 1847']
+            - ['955 1669 59 646 1416']
+            - ['1394 1355 670 615 1278 746 1013 1208 1331']
+            - ['135 108 646 1287 1234 1542']
+            - ['85 879 1427 246 1858 232 1569 1652']
+            - ['1899 774 1891 1942 1218']
+            - ['1810 1258 173 1069 439 1753 113']
+            - ['548 1395 146 1588 551']
+
+
+        output:
+            - ['[88, 1203, 85, 146, 170, 109, 1224, 237, 747]']
+            - ['[1538, 694, 574, 1546, 363, 245, 1515, 1342]']
+            - ['[1583, 582, 587, 1709, 860, 108, 1847]']
+            - ['[955, 1669, 59, 646, 1416]']
+            - ['[1394, 1355, 670, 615, 1278, 746, 1013, 1208, 1331]']
+            - ['[135, 108, 646, 1287, 1234, 1542]']
+            - ['[85, 879, 1427, 246, 1858, 232, 1569, 1652]']
+            - ['[1899, 774, 1891, 1942, 1218]']
+            - ['[1810, 1258, 173, 1069, 439, 1753, 113]']
+            - ['[548, 1395, 146, 1588, 551]']
+
+multiply:
+    name: Multi
+    desc: Print the product of the all given numbers.
+    tags:
+        - programming
+    value: 100
+    flageval: no
+    language: python
+    allowed: 
+        - functools
+    maxlines: 0
+    delimiter: !!str "\n"
+    testcases:
+        sample:
+
+        input:
+            - ['88 1203 85 146 170 109 1224 237 747']
+            - ['1538 694 574 1546 363 245 1515 1342']
+            - ['1583 582 587 1709 860 108 1847']
+            - ['955 1669 59 646 1416']
+            - ['1394 1355 670 615 1278 746 1013 1208 1331']
+            - ['135 108 646 1287 1234 1542']
+            - ['85 879 1427 246 1858 232 1569 1652']
+            - ['1899 774 1891 1942 1218']
+            - ['1810 1258 173 1069 439 1753 113']
+            - ['548 1395 146 1588 551']
+
+
+        output:
+            - ['5275284251213114899200']
+            - ['171267534552657440066400']
+            - ['158552526078356021280']
+            - ['86021595066480']
+            - ['1208581950081796263235152000']
+            - ['23065778770800480']
+            - ['29304449148407414163840']
+            - ['6574367365573896']
+            - ['36619120054407228460']
+            - ['97658425666080']
+
+allorany:
+    name: All or any
+    desc: You are given a space separated list of integers. If all the integers are positive, then you need to check if any integer is a palindromic integer.
+        Input Format
+        The first line contains the space separated list of  integers.
+
+        Output Format
+        Print True if all the conditions of the problem statement are satisfied. Otherwise, print False.
+
+    tags:
+        - programming
+    value: 100
+    flageval: no
+    language: python
+    allowed: None
+    maxlines: 0
+    delimiter: !!str "\n"
+    testcases:
+        sample:
+
+        input:
+            - ['12 9 61 5 14']
+            - ['1 2 3 4 5 -9']
+            - ['81']
+            - ['-11 -22']
+            - ['1 2 3 4 5 6 7 8 9 10']
+            - ['6 6 6 6 6 6']
+
+        output:
+            - ['True']
+            - ['False']
+            - ['False']
+            - ['False']
+            - ['True']
+            - ['True']
+
+nlists:
+    name: Nested lists
+    desc: "Given the names and grades for each student in a class of  students, store them in a nested list and print the name(s) of any student(s) having the second lowest grade.
+    Note: If there are multiple students with the second lowest grade, order their names alphabetically and print each name on a new line.
+    Example
+
+    The ordered list of scores is , so the second lowest score is . There are two students with that score: . Ordered alphabetically, the names are printed as:
+    alpha
+    beta
+    Input Format
+    The first line contains an integer, , the number of students.
+    The  subsequent lines describe each student over  lines.
+    - The first line contains a student's name.
+    - The second line contains their grade.
+    Constraints
+
+    There will always be one or more students having the second lowest grade.
+    Output Format
+    Print the name(s) of any student(s) having the second lowest grade in. If there are multiple students, order their names alphabetically and print each one on a new line."
+    tags:
+        - programming
+    value: 100
+    flageval: no
+    language: python
+    allowed: None
+    maxlines: 0
+    delimiter: !!str "\n"
+    testcases:
+        sample:
+
+        input:
+            - ['4', 'Prashant', '32', 'Pallavi', '36', 'Dheeraj', '39', 'Shivam', '40']
+            - ['5', 'Harry', '37.21', 'Berry', '37.21', 'Tina', '37.2', 'Akriti', '41', 'Harsh', '39']
+            - ['5', 'Harsh', '20', 'Beria', '20', 'Varun', '19', 'Kakunami', '19', 'Vikas', '21']
+            - ['4', 'Rachel', '-50', 'Mawer', '-50', 'Sheen', '-50', 'Shaheen', '51']
+            - ['5', 'Prashant', '52.22', 'Kush', '52.223', 'Kant', '52.222', 'Kanti', '52.2222', 'Harshit', '52.22222']
+            - ['4', 'Sona', '-25.001', 'Mona', '-25.0001', 'Mini', '-25.000', 'Rita', '-25.0']
+
+        output:
+            - ['Pallavi']
+            - ['Berry', 'Harry']
+            - ['Beria', 'Harsh']
+            - ['Shaheen']
+            - ['Kant']
+            - ['Mona']
+
+ginorts:
+    name: ginortS
+    desc: "You are given a string S.
+    S contains alphanumeric characters only.
+        Your task is to sort the string  in the following manner
+        All sorted lowercase letters are ahead of uppercase letters.
+        All sorted uppercase letters are ahead of digits.
+        All sorted odd digits are ahead of sorted even digits.
+        Input Format
+        A single line of input contains the string .
+        Constraints
+
+        Output Format
+        Output the sorted string .
+        Sample Input"
+    tags:
+        - programming
+    value: 100
+    flageval: no
+    language: python
+    allowed: None
+    maxlines: 0
+    delimiter: !!str "\n"
+    testcases:
+        sample:
+
+        input:
+            - ['Sorting1234']
+            - ['1qaz2wsx3edc4rfv5tgb6yhn7ujm8ik9ol0pQWERTYUIOPASDFGHJKLZXCVBNM']
+            - ['qwerty123456789dfghj123456789QWERTYUIOPASDFGHJKLZXCVBNM0123456789']
+            - ['JWPXjjL7YUD62dHRJ7h8rLB6rN144Y7h84CXS8KU76MSyV44h62X84VFJ3KA13481t8r7HW0r72h431F56C244JEw6E28I21qHXdH9M66qe1IJjd62892R22OGW35wN3O4tRI95S448e23BD83C6C7Fw32r335A028JIqSUVGXE7MS98PIU9IK4f36L5TdHIAr79JSw59Pe1UWj9GwWLUWT6313L7Jw60287T9E1L939HZAM25tVHr64fTIt29FI5E22PWd985hIg3445333gJ98PyfW13yLQtjV6Q68BwXeBCJ1CODO67Wd9590C7g7KMMjS9GPXZFhU3MhSNLZ993deWjZV5QGg58I764r2VREfAH3Zje3tg729FOV144E2983S6eB6W1qK5SH54V87Y28eSCCdG36FyA4GBP4548P591T65962P3IRj528LQhNy18YX8Nt79UjQV0D396Tj81ZyR76IhWW1Qh6B51U26d6q8wP26JO9yW3V1AO28JA7TQVWdGCLK4TRKwQ8J341M183A160P9TFG68ND3Ttg4CrQ02553KZg8H1942J9HP8A8328C72QtRAOLQMTCEqeIU8wHW4RN2e629C3HC65qeJ904IO04Yt203XTTY5NI5LyH142g18hIgPg4US37SN1V06Ud727VfBy6GS38KJKNf4H2AIQ2YtJO1Z9Y22Zed91f64A6DJGKqH05yrV17J5DrLQ4tKd4HT31U35S5M2w98KUC33XyAtSL8EIU6rW73r62ry9546qCf5691H4dIRQPKAJ85jdYPIXVwehEA9ZfHYj673H63wIy883IqMRMjgHq9LV148G1PJ1W84W7Z8FTLI1A2FIH9EW46jReJ6j18D5qd939t796hjFjwXe722g797X12Z8B0FI3D6Zh77MAgg2GSF313752j26d5qf94677O43qLh6PTFKG8V4At1y9Vf6AR352gHBjPT1D775775H7g9KHF48gD']
+            - ['I86E24gV3dfNQ2NVI2P2T5UdVyqPw8jN0EACrH31X3174LIdr5jd21ML5w2t3229QdQq85PAhUX5LU33h6347qe21458Nd7j7L5802wJe126w0rEL89VIw94M7G56fy39HJ11XMF3A515fI745E5fEjy9D91SI1LA83M4M578S40j35K7rJhM1fHUDTQW36WKwS2fMq5G4GA8q3SF4RgE213Wf9BK1C49yRwB87jMQOWV3615HUMq6Y7D9yHtT1It422J574IhDw6yT1GSGTTH53fN1OHY5GeD94941JOC4FV1NEj7Dq496Z463h1F5FVJ3RQ5P45N4452rGK8U3J18M1LGMMj4LLYVw17BIfZUhZMgV482Ij462O19Vt813N57N4wNS8hTqF3WHO4Dq79yLJLP9WjwTwC75e66DX34697W1tM19K8VP3qqgVJ4MRdHX4BMfO666dP9B3BS14LwDhZ65LhHwQeTY98MMjqJ5etq7X2YWrhYeVMyj15HI754W7XKZhJ93W2qXJ1C83M2Fe6445HeR1873r262fHM88XQ3L558Q8yH574Rw88rAw4U0rJJ8j2Q932M59ROqVwG3D3jXfIMX639EfINGJ6BgS3r6tWH7ZUV841127dK6JAeES61T72LeeW7r31Aw76eAy73wU6R43Z65jf0hW8rR81hPJFe5T27VLrM6DgTyBJU4yrS6qRht6P7y99Xw93R12Lq7e4UPM1A9ZEWSI8rAfH3Z5S5A3SeYDyJ1140h4dJUOO9F1IQ8M705e6YH5WJ31H5OHyY442rB9392FL7DR35FO14f2K42A18J0d14FEWj83TA0568w16dd52843NO867gT64VH5VU429r648CB9B9rSF9QCPf276dXGO5rOB3499d6841OB0852Af8455y3HH52rj3R57183822d8tO321e124V47N1J3OHNV3SQ3j1DyLt5HhC7F67CZd3DWyEgN7']
+            - ['HackerRank']
+
+        output:
+            - ['ginortS1324']
+            - ['abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1357902468']
+            - ['defghjqrtwyABCDEFGHIJKLMNOPQRSTUVWXYZ1113335557779990222444666888']
+            - ['dddddddddddddddddeeeeeeeeeeeeeeefffffffffffggggggggggggggggghhhhhhhhhhhhhhhjjjjjjjjjjjjjjjjjjjjqqqqqqqqqqqqqqrrrrrrrrrrrrrrtttttttttttttttwwwwwwwwwwwwwwyyyyyyyyyyyyyyAAAAAAAAAAAAAAAAAAAABBBBBBBBBBCCCCCCCCCCCCCCCCCDDDDDDDDDDDEEEEEEEEEEEFFFFFFFFFFFFFFFGGGGGGGGGGGGGGHHHHHHHHHHHHHHHHHHHHHHHHHIIIIIIIIIIIIIIIIIIIIIIIIIIJJJJJJJJJJJJJJJJJJJJJJKKKKKKKKKKKKKKKKLLLLLLLLLLLLLLLLLMMMMMMMMMMMMMNNNNNNNNNNOOOOOOOOOOOPPPPPPPPPPPPPPPPPPQQQQQQQQQQQQQQRRRRRRRRRRRRRSSSSSSSSSSSSSSSSSTTTTTTTTTTTTTTTTTUUUUUUUUUUUUUUUVVVVVVVVVVVVVVVVVVVWWWWWWWWWWWWWWWWWWWWXXXXXXXXXXXXXYYYYYYYYYYZZZZZZZZZZZZZ111111111111111111111111111111111111111133333333333333333333333333333333333333333333333333355555555555555555555555555555555555555777777777777777777777777777777777777777777999999999999999999999999999999999999999999999900000000000002222222222222222222222222222222222222222222222222244444444444444444444444444444444444444444444446666666666666666666666666666666666666666666666666668888888888888888888888888888888888888888888888888']
+            - ['dddddddddddddddddeeeeeeeeeeeeeeeeeeffffffffffffffffffgggggggghhhhhhhhhhhhhhhhjjjjjjjjjjjjjjjjjjqqqqqqqqqqqqqqqqqrrrrrrrrrrrrrrrrrrrrttttttttttwwwwwwwwwwwwwwwwwwwwwyyyyyyyyyyyyyyyyyyAAAAAAAAAAAAAAABBBBBBBBBBBBBCCCCCCCCCDDDDDDDDDDDDDDDEEEEEEEEEEEEFFFFFFFFFFFFFFGGGGGGGGGGGHHHHHHHHHHHHHHHHHHHHHHHHIIIIIIIIIIIIIIIJJJJJJJJJJJJJJJJJJJJJJJKKKKKKKKLLLLLLLLLLLLLLLLLLLMMMMMMMMMMMMMMMMMMMMMMMMMMNNNNNNNNNNNNNNNOOOOOOOOOOOOOOOOOPPPPPPPPPPPQQQQQQQQQQQQQRRRRRRRRRRRRRSSSSSSSSSSSSSSSTTTTTTTTTTTTTTUUUUUUUUUUUUUUVVVVVVVVVVVVVVVVVVVVWWWWWWWWWWWWWWWWWXXXXXXXXXXXXXYYYYYYYYYZZZZZZZZZZ1111111111111111111111111111111111111111111111111111333333333333333333333333333333333333333333333333333335555555555555555555555555555555555555555555555555555777777777777777777777777777777777777777799999999999999999999999999999999999900000000000222222222222222222222222222222222222222222444444444444444444444444444444444444444444444444444444466666666666666666666666666666666666666668888888888888888888888888888888888888888888']
+            - ['aacekknrHR']
+
+# Task Set 2 athletesort, trichop, passfail, jumbledletters, secretimages, readingemails, leapyear, tribonnaci, minimax, equateascii, caesargame
+
+athletesort:
+    name: Athlete sort
+    desc: "You are given details that contains a list of `N` athletes and their details (such as age, height, weight and so on). You are required to sort the data based on the `Kth` attribute and print the final resulting table. Follow the example given below for better understanding.
+            https://s3.amazonaws.com/hr-assets/0/1514874268-6fabad07aa-AthleteSort2.png
+        Note that `K` is indexed from `0` to `M-1` , where `M` is the number of attributes.
+        Note; If two attributes are the same for different rows, for example, if two atheletes are of the same age, print the row that appeared first in the input.
+        Input Format
+        The first line contains `N` and `M` separated by a space.
+        The next `N` lines each contain `M` elements.
+        The last line contains `K`.
+        
+         
+        Each element
+        Output Format
+        Print the `N` lines of the sorted table. Each line should contain the space separated elements. Check the sample below for clarity."
+    tags:
+        - programming
+    value: 100
+    flageval: no
+    language: python
+    allowed: None
+    maxlines: 0
+    delimiter: !!str "\n"
+    testcases:
+        sample:
+
+        input:
+            - ['5 3', '10 2 5', '7 1 0', '9 9 9', '1 23 12', '6 5 9', '1']
+            - ['100 10', '64 79 18 94 46 81 74 97 71 92', '46 24 23 20 68 15 53 93 24 91', '17 66 34 64 28 5 55 25 44 96', '16 71 80 84 5 79 63 77 69 77', '33 77 24 13 58 81 41 36 73 62', '93 26 16 55 61 51 39 69 29 45', '44 85 1 48 23 59 52 82 50 37', '77 74 9 21 35 54 81 57 32 76', '82 21 72 49 98 21 77 64 6 63', '68 17 93 83 12 43 84 28 96 86', '9 16 3 89 38 11 70 25 41 38', '49 99 31 19 85 97 80 63 16 69', '50 85 80 75 36 48 56 69 63 94', '78 80 83 86 92 60 56 90 22 73', '69 81 45 9 67 25 82 46 68 82', '98 38 23 31 38 83 37 76 69 82', '95 48 21 64 25 6 38 96 69 23', '44 97 46 54 21 56 65 51 66 34', '87 22 27 24 55 48 90 10 8 51', '21 6 74 78 8 88 26 63 72 43', '64 4 42 20 54 91 2 51 79 40', '93 76 52 58 40 78 98 27 53 48', '85 23 86 30 91 49 81 4 59 9', '88 96 77 95 36 71 7 52 14 20', '69 98 21 94 14 35 28 97 3 9', '60 47 56 34 35 61 9 44 80 92', '4 76 57 28 60 3 46 4 6 17', '59 44 88 7 71 60 84 12 91 38', '76 57 5 2 25 12 46 62 32 68', '14 15 11 1 34 20 54 58 45 38', '89 49 16 43 74 51 80 22 88 31', '8 98 51 73 32 13 59 12 56 92', '36 82 9 63 77 79 77 25 52 91', '63 82 58 75 13 20 79 89 55 89', '58 37 93 1 29 72 78 95 47 35', '90 82 58 60 55 86 82 22 44 94', '55 17 51 99 29 92 1 79 96 34', '32 78 41 1 24 52 11 80 3 25', '30 32 32 71 85 80 63 23 80 97', '35 22 11 71 10 48 43 58 31 33', '30 98 60 58 28 71 95 28 21 29', '74 4 13 99 90 64 28 27 73 4', '52 21 52 31 35 82 35 64 21 71', '92 85 13 48 5 32 92 70 15 85', '47 55 25 80 24 22 19 78 17 43', '3 91 71 53 49 39 96 88 59 61', '79 26 98 2 95 95 70 38 82 85', '69 67 41 11 95 39 20 19 96 36', '11 74 48 23 84 49 47 43 27 90', '4 28 35 14 70 62 52 94 46 91', '72 11 14 82 59 51 93 98 55 79', '90 84 84 24 21 81 11 57 27 78', '98 97 59 51 89 40 96 35 25 59', '73 85 64 17 46 9 79 54 27 15', '48 91 7 56 41 6 4 26 96 39', '43 22 34 89 52 59 55 52 38 42', '10 31 9 8 21 46 29 4 97 4', '44 49 78 31 53 29 11 35 46 14', '44 39 57 35 9 63 85 5 97 24', '9 72 49 50 41 47 23 71 15 45', '51 6 98 64 75 35 39 48 2 50', '92 22 72 60 96 15 17 4 79 27', '90 30 98 28 92 8 83 71 24 62', '5 54 86 14 71 96 87 2 58 78', '37 61 60 30 46 96 49 58 27 48', '14 59 22 35 75 60 55 28 91 85', '21 1 85 85 78 67 24 69 22 17', '76 61 84 64 33 76 61 10 33 95', '71 9 1 32 31 80 69 7 25 59', '69 64 78 85 21 88 56 70 92 74', '79 12 8 9 54 56 37 44 1 84', '6 66 54 5 82 17 41 25 3 71', '8 44 63 17 75 43 87 15 85 3', '15 42 15 59 38 22 46 27 19 13', '54 71 76 93 67 39 46 12 78 46', '23 82 71 34 31 61 94 58 10 62', '30 8 43 38 7 23 77 38 93 32', '32 72 46 59 64 45 14 73 62 72', '76 26 47 89 25 73 79 28 60 48', '41 58 85 55 29 64 39 84 20 87', '24 8 70 16 69 32 17 26 58 16', '40 53 40 63 22 37 11 74 7 8', '23 4 56 39 27 94 91 72 14 61', '41 86 3 29 41 15 99 50 82 84', '33 5 22 93 73 86 99 87 26 66', '73 25 55 46 69 38 99 14 43 55', '43 21 82 30 90 66 6 67 49 25', '81 38 65 40 80 7 90 82 33 13', '18 45 1 90 53 51 51 96 32 90', '32 69 51 22 71 85 80 61 99 23', '88 8 41 92 4 25 64 89 30 75', '93 85 99 87 67 3 54 16 98 57', '33 54 31 83 64 93 3 24 65 81', '74 19 15 66 17 14 34 50 57 16', '10 30 20 97 32 85 83 89 68 18', '46 82 9 14 54 50 55 28 26 96', '29 96 3 33 12 52 11 26 19 22', '50 81 95 59 76 53 10 9 72 87', '25 85 54 43 53 13 52 70 38 76', '20 14 30 80 23 43 27 67 42 11', '5']
+
+        output:
+            - ['7 1 0', '10 2 5', '6 5 9', '9 9 9', '1 23 12']
+            - ['4 76 57 28 60 3 46 4 6 17', '93 85 99 87 67 3 54 16 98 57', '17 66 34 64 28 5 55 25 44 96', '95 48 21 64 25 6 38 96 69 23', '48 91 7 56 41 6 4 26 96 39', '81 38 65 40 80 7 90 82 33 13', '90 30 98 28 92 8 83 71 24 62', '73 85 64 17 46 9 79 54 27 15', '9 16 3 89 38 11 70 25 41 38', '76 57 5 2 25 12 46 62 32 68', '8 98 51 73 32 13 59 12 56 92', '25 85 54 43 53 13 52 70 38 76', '74 19 15 66 17 14 34 50 57 16', '46 24 23 20 68 15 53 93 24 91', '92 22 72 60 96 15 17 4 79 27', '41 86 3 29 41 15 99 50 82 84', '6 66 54 5 82 17 41 25 3 71', '14 15 11 1 34 20 54 58 45 38', '63 82 58 75 13 20 79 89 55 89', '82 21 72 49 98 21 77 64 6 63', '47 55 25 80 24 22 19 78 17 43', '15 42 15 59 38 22 46 27 19 13', '30 8 43 38 7 23 77 38 93 32', '69 81 45 9 67 25 82 46 68 82', '88 8 41 92 4 25 64 89 30 75', '44 49 78 31 53 29 11 35 46 14', '92 85 13 48 5 32 92 70 15 85', '24 8 70 16 69 32 17 26 58 16', '69 98 21 94 14 35 28 97 3 9', '51 6 98 64 75 35 39 48 2 50', '40 53 40 63 22 37 11 74 7 8', '73 25 55 46 69 38 99 14 43 55', '3 91 71 53 49 39 96 88 59 61', '69 67 41 11 95 39 20 19 96 36', '54 71 76 93 67 39 46 12 78 46', '98 97 59 51 89 40 96 35 25 59', '68 17 93 83 12 43 84 28 96 86', '8 44 63 17 75 43 87 15 85 3', '20 14 30 80 23 43 27 67 42 11', '32 72 46 59 64 45 14 73 62 72', '10 31 9 8 21 46 29 4 97 4', '9 72 49 50 41 47 23 71 15 45', '50 85 80 75 36 48 56 69 63 94', '87 22 27 24 55 48 90 10 8 51', '35 22 11 71 10 48 43 58 31 33', '85 23 86 30 91 49 81 4 59 9', '11 74 48 23 84 49 47 43 27 90', '46 82 9 14 54 50 55 28 26 96', '93 26 16 55 61 51 39 69 29 45', '89 49 16 43 74 51 80 22 88 31', '72 11 14 82 59 51 93 98 55 79', '18 45 1 90 53 51 51 96 32 90', '32 78 41 1 24 52 11 80 3 25', '29 96 3 33 12 52 11 26 19 22', '50 81 95 59 76 53 10 9 72 87', '77 74 9 21 35 54 81 57 32 76', '44 97 46 54 21 56 65 51 66 34', '79 12 8 9 54 56 37 44 1 84', '44 85 1 48 23 59 52 82 50 37', '43 22 34 89 52 59 55 52 38 42', '78 80 83 86 92 60 56 90 22 73', '59 44 88 7 71 60 84 12 91 38', '14 59 22 35 75 60 55 28 91 85', '60 47 56 34 35 61 9 44 80 92', '23 82 71 34 31 61 94 58 10 62', '4 28 35 14 70 62 52 94 46 91', '44 39 57 35 9 63 85 5 97 24', '74 4 13 99 90 64 28 27 73 4', '41 58 85 55 29 64 39 84 20 87', '43 21 82 30 90 66 6 67 49 25', '21 1 85 85 78 67 24 69 22 17', '88 96 77 95 36 71 7 52 14 20', '30 98 60 58 28 71 95 28 21 29', '58 37 93 1 29 72 78 95 47 35', '76 26 47 89 25 73 79 28 60 48', '76 61 84 64 33 76 61 10 33 95', '93 76 52 58 40 78 98 27 53 48', '16 71 80 84 5 79 63 77 69 77', '36 82 9 63 77 79 77 25 52 91', '30 32 32 71 85 80 63 23 80 97', '71 9 1 32 31 80 69 7 25 59', '64 79 18 94 46 81 74 97 71 92', '33 77 24 13 58 81 41 36 73 62', '90 84 84 24 21 81 11 57 27 78', '52 21 52 31 35 82 35 64 21 71', '98 38 23 31 38 83 37 76 69 82', '32 69 51 22 71 85 80 61 99 23', '10 30 20 97 32 85 83 89 68 18', '90 82 58 60 55 86 82 22 44 94', '33 5 22 93 73 86 99 87 26 66', '21 6 74 78 8 88 26 63 72 43', '69 64 78 85 21 88 56 70 92 74', '64 4 42 20 54 91 2 51 79 40', '55 17 51 99 29 92 1 79 96 34', '33 54 31 83 64 93 3 24 65 81', '23 4 56 39 27 94 91 72 14 61', '79 26 98 2 95 95 70 38 82 85', '5 54 86 14 71 96 87 2 58 78', '37 61 60 30 46 96 49 58 27 48', '49 99 31 19 85 97 80 63 16 69']
+
+trichop:
+    name: Triangle Chopstics
+    desc: "Natsu and Grey are having a silly fight again and this time it's about the person who is going to have the larger piece of pie. So the guild master gives them a puzzle to solve and announces that the winner gets the larger pie. There are 2 chopsticks with some given lengths 'a' and 'b' and a jar with chopsticks of different lengths. Grey is going to pick a random number 'r' and Natsu is going to check if it is possible to make a triangle considering each chopstick from the jar as the 3rd side and finds the total count of triangles that can be formed. If the no.of triangles formed is more than the random number then Natsu is going to win. Else Grey wins. So find out the winner. 'n' stands for the no.of test cases.
+
+    Input:
+    
+    First line contains a, b and r
+    Second contains the no.of chopsticks in the jar (is always greater than r)
+    Third line contains all the lengths of chopsticks in the jar
+    
+    Output:
+    In the first line give the total no.of triangles possible
+    In the second line give the name of the winner"
+    tags:
+        - programming
+    value: 100
+    flageval: no
+    language: python
+    maxlines: 0
+    allowed: None
+    delimiter: !!str "\n"
+    testcases:
+        sample:
+           "": ""
+        input:
+            - ['9 8 4'           , '7'    ,  '11 14 19 2 8 17 5']
+            - ['7 10 9'          ,  '13'  ,  '200 236 120 165 1000 540 3420 88 10 16 8 23 13']
+            - ['20000 20000 14'  ,  '20'  ,  '02092 0920902 92892 883 822 8292 917781 747 2292 747 2728 209290 3838 8484 16156 3535 1516 166 1767 178878']
+            - ['100 20 8'        ,  '15'  ,  '992 81 727 16 919 71 61 200']
+            - ['4 5 4'           , '5'    ,  '9 8 7 2 3']
+            - ['19 167 6'        , '10'   ,  '19 1829 18718 672672 717 1881 828 17 26 378']
+            - ['10 500 4'        , '9'    ,  '92 893 734 72 82 82 73 903 93']
+            - ['93 39 10'        , '10'   ,  '82 17 67 16 178 167 14 431 16 17']
+            - ['46 28 0'         ,  '1'   ,  '92900']
+            - ['2020 2019 5'     , '5'    ,  '92 1829 818 1712 1000']
+            
+        output:
+            - ['5', 'Natsu']
+            - ['4', 'Grey']
+            - ['15', 'Natsu']
+            - ['1', 'Grey']
+            - ['4', 'Natsu']
+            - ['0', 'Grey']
+            - ['0', 'Grey']
+            - ['2', 'Grey']
+            - ['0', 'Natsu']
+            - ['5', 'Natsu']
+
+
+passfail:
+    name: Pass or Fail
+    desc: "Make a program such that it takes input of marks (out of 100) of 'n' subjects along with names of 'm' students. Then it should print the
+    names of all the students according to their ranks. The criteria for ranking is based on averages. Also, the student who scored less than 40
+    in any of the subjects is not eligible for ranking and is considered 'FAIL'. Make sure to print the list of students who failed in atleast
+    one of the subjects.
+    
+    Input:
+        Line one : n,m separated with space
+        m times:
+            Line one : student name
+            Line two : his marks separated with space
+    Output:
+        Line one : A dictionary of keys as ranks and values as names
+        Line two : list of students failed in at least one subject"
+    tags:
+        - programming
+    value: 120
+    flageval: no
+    language: python
+    maxlines: 0
+    allowed: None
+    delimiter: !!str "\n"
+    testcases:
+        sample:
+           "": ""
+        input:
+            - ['5 8' , 'Zorina Abreu', '50 90 98 80 17', 'Marlon', '45 80 70 64 30', 'Angelita', '30 40 39 89 49', 'Micki', '88 87 85 80 89', 'Aleen', '92 90 94 96 98', 'Sadye', '40 45 47 43 50', 'Rivka', '100 100 100 100 99', 'Margit', '0 29 34 42 12']
+            - ['6 6' , 'Teresa'      , '72 48 79 91 76 73', 'Christi', '96 97 59 35 100 75', 'Tandra', '66 55 100 41 65 57', 'Gerda', '37 61 96 40 75 46', 'Marni', '49 49 52 77 74 46', 'Christi', '38 100 97 59 86 70']
+            - ['5 10', 'Wesley'      , '57 67 69 88 68', 'Delorse', '91 37 69 89 93', 'Jalisa', '87 59 69 65 51', 'Jennette', '94 42 57 53 40', 'Delorse', '63 38 54 58 59', 'Christi', '79 93 64 95 100', 'Lita', '82 49 63 76 53', 'Arthur', '97 74 54 37 35', 'Tenisha', '61 53 68 52 67', 'Wesley', '49 39 36 35 58']
+            - ['8 7' , 'Amado'       , '98 53 47 40 63 55 45 81', 'Rema', '55 60 75 99 93 41 58 63', 'Franklyn', '69 88 42 97 93 57 36 74', 'Ruth', '70 56 81 96 86 99 84 86', 'Delorse', '94 100 39 95 47 76 89 48', 'Tenisha', '83 81 73 65 82 56 72 81', 'Wesley', '95 94 63 53 83 49 47 74']
+            - ['10 6', 'Ruth'        , '36 46 36 44 61 66 49 53 91 59', 'Penelope', '84 83 48 45 57 88 89 55 51 81', 'Arthur', '62 92 96 65 95 70 48 72 89 56', 'Allena', '97 75 46 40 100 93 64 42 39 74', 'Ruth', '41 49 98 73 97 73 88 54 63 41', 'Rema', '35 77 71 68 65 67 36 83 50 54']
+            - ['7 5' , 'Joe'         , '53 77 68 63 71 71 68', 'Wesley', '59 53 57 70 86 46 95', 'Lita', '44 63 50 40 58 89 81', 'Randal', '91 64 69 84 46 72 54', 'Sibyl', '43 35 41 55 68 39 70']
+            - ['5 9' , 'Abram'       , '57 57 48 89 55', 'Rema', '35 77 37 71 45', 'Ned', '93 74 59 50 73', 'Sharda', '81 68 73 88 39', 'Anjelica', '57 80 63 39 48', 'Delorse', '54 36 44 60 87', 'Blanch', '71 54 69 94 99', 'Wesley', '47 39 83 70 73', 'Wesley', '52 38 40 54 83']
+            - ['5 7' , 'Jennette'    , '94 58 61 62 75', 'Lita', '39 78 58 67 35', 'Randal', '42 37 73 39 51', 'Gerardo', '47 79 51 62 83', 'Daysi', '35 73 88 36 43', 'Abram', '88 51 38 59 95', 'Malia', '44 81 64 41 35']
+            - ['10 9', 'Elsa'        , '70 72 37 76 96 94 37 90 58 87', 'Fallon', '81 92 37 41 82 62 39 70 36 64', 'Anjelica', '96 66 74 81 59 59 56 65 41 44', 'Marleen', '90 89 47 39 81 61 71 96 68 77', 'Tenisha', '63 100 92 51 50 79 67 60 52 88', 'Tresa', '55 52 96 53 37 43 55 93 74 36', 'Allene', '82 56 62 67 38 76 65 73 71 50', 'Jennette', '52 85 89 68 99 70 52 38 48 83', 'Jalisa', '38 67 75 81 49 73 94 93 71 86']
+            - ['4 9' , 'Tandra'      , '72 92 64 81', 'Gerda', '50 37 75 80', 'Anjelica', '99 58 99 46', 'Blanch', '69 80 36 81', 'Gerda', '41 79 48 80', 'Daysi', '39 78 71 41', 'Sharda', '88 73 78 100', 'Joe', '45 66 59 93', 'Jennette', '84 62 58 61']
+            
+        output:
+            - ["{1: 'Rivka', 2: 'Aleen', 3: 'Micki', 4: 'Sadye'}\n['Angelita', 'Margit', 'Marlon', 'Zorina Abreu']"]
+            - ["{1: 'Teresa', 2: 'Tandra', 3: 'Marni'}\n['Christi', 'Christi', 'Gerda']"]
+            - ["{1: 'Christi', 2: 'Wesley', 3: 'Jalisa', 4: 'Lita', 5: 'Tenisha', 6: 'Jennette'}\n['Arthur', 'Delorse', 'Delorse', 'Wesley']"]
+            - ["{1: 'Ruth', 2: 'Tenisha', 3: 'Wesley', 4: 'Rema', 5: 'Amado'}\n['Delorse', 'Franklyn']"]
+            - ["{1: 'Arthur', 2: 'Penelope', 3: 'Ruth'}\n['Allena', 'Rema', 'Ruth']"]
+            - ["{1: 'Randal', 2: 'Joe', 3: 'Wesley', 4: 'Lita'}\n['Sibyl']"]
+            - ["{1: 'Blanch', 2: 'Ned', 3: 'Abram'}\n['Anjelica', 'Delorse', 'Rema', 'Sharda', 'Wesley', 'Wesley']"]
+            - ["{1: 'Jennette', 2: 'Gerardo'}\n['Abram', 'Daysi', 'Lita', 'Malia', 'Randal']"]
+            - ["{1: 'Tenisha', 2: 'Anjelica'}\n['Allene', 'Elsa', 'Fallon', 'Jalisa', 'Jennette', 'Marleen', 'Tresa']"]
+            - ["{1: 'Sharda', 2: 'Tandra', 3: 'Anjelica', 4: 'Jennette', 5: 'Joe', 6: 'Gerda'}\n['Blanch', 'Daysi', 'Gerda']"]
+
+jumbledletters:
+    name: Jumbled Letters
+    desc:
+        "Natsu and Lucy were given an assignment in their school. They were given a sentence, all the spaces of it were to be removed, then segregate all the even placed characters, reverse them and add it to the previously left odd characters. They wanted to find the fast way to get the solution and wanted to code it in python. So aren’t you going to help them out?        
+
+        Input:
+        The input string
+
+        Output:
+        String formed after the changes"
+    tags:
+        - programming
+    value: 80
+    flageval: no
+    language: python
+    maxlines: 0
+    allowed: None
+    delimiter: !!str " "
+    testcases:
+        sample:
+           "": ""
+        input:
+            - ['I had a fight with my older brother yesterday.']
+            - ["He's always at home on Sundays."]
+            - ["Thanks. I'll be right back.wait!"]
+            - ["It's obvious that she's sick.Uhhh!"]
+            - ["I'm an American."]
+            - ['He must love you.']
+            - ["Were you able to open it before, on the computer you're using now?"]
+            - ["I'll bring my sister when I come next time.Sorry"]
+            - ['He must have gotten over his cold.']
+            - ["I can't believe you turned down that job."]
+                        
+        output:
+            - ['I.aaarithewrthmoobderlrytheiytsgefddyh']
+            - ["H.'yadwuynaehomtosSanlasse"]
+            - ["T!aikw.k'altegirhbblcI.santh"]
+            - ["I!'hoUvkoisshetsha'tsuci.bhsht"]
+            - ["I.manimerAcan'"]
+            - ['H.moselovtyuue']
+            - ["W?royguibueroupynetuemocehont,erofpbtireoo'telsanonewe"]
+            - ["IylrbSiegiytieterohInecwmensxstmmn.rolr'"]
+            - ['H.mlschivrgvtnetooeehastoude']
+            - ["I.ao'tbhlneoedonturueydvwiteatjnbc"]
+
+secretimages:
+    name: Secret Images
+    desc: None    
+    tags:
+        - programming
+    value: 50
+    flageval: no
+    language: python
+    maxlines: 0
+    allowed: None
+    delimiter: !!str " "
+    testcases:
+        sample:
+           "": ""
+        input:
+            - ['file0.jpeg file1.png file2.png file3.png file4.jpeg file5.bmp file6.bmp file7.jpeg file8.bmp file9.jpeg file10.bmp file11.bmp file12.jpeg file13.bmp file14.bmp file15.jpeg file16.bmp file17.jpeg']
+            - ['file0.jpeg file1.bmp file2.jpeg file3.png file4.bmp file5.bmp file6.bmp file7.png file8.jpeg file9.png file10.bmp file11.bmp file12.png']
+            - ['file0.jpeg file1.bmp file2.bmp file3.jpeg file4.png file5.jpeg file6.png']
+            - ['file0.png file1.png file2.png file3.bmp file4.bmp file5.png file6.bmp file7.png file8.png file9.bmp file10.png file11.bmp file12.jpeg file13.jpeg file14.bmp']
+            - ['file0.jpeg file1.png file2.jpeg file3.jpeg']
+            - ['file0.png file1.bmp file2.bmp file3.jpeg file4.png file5.png file6.png file7.jpeg file8.bmp file9.png file10.png file11.bmp file12.png file13.bmp file14.bmp file15.jpeg file16.bmp file17.bmp file18.bmp file19.png']
+            - ['file0.bmp file1.png file2.png file3.jpeg file4.bmp file5.png file6.jpeg file7.bmp file8.jpeg file9.bmp file10.png file11.jpeg file12.png file13.png file14.bmp file15.bmp file16.bmp file17.bmp']
+            - ['file0.png file1.png file2.png file3.bmp file4.bmp file5.png file6.png file7.png file8.jpeg file9.jpeg file10.bmp file11.jpeg']
+            - ['file0.jpeg file1.png file2.jpeg file3.png file4.jpeg file5.jpeg file6.jpeg file7.jpeg file8.jpeg file9.bmp file10.jpeg file11.bmp file12.jpeg file13.png file14.jpeg']
+            - ['file0.png file1.bmp file2.bmp file3.jpeg file4.jpeg file5.bmp file6.jpeg file7.png file8.png file9.bmp file10.bmp file11.jpeg file12.jpeg file13.png file14.bmp file15.bmp file16.bmp file17.bmp file18.png file19.png']
+            
+                        
+        output:
+            - ['3', '8', '7']
+            - ['4', '6', '3']
+            - ['2', '2', '3']
+            - ['7', '6', '2']
+            - ['1', '0', '3']
+            - ['8', '9', '3']
+            - ['6', '8', '4']
+            - ['6', '3', '3']
+            - ['3', '2', '10']
+            - ['6', '9', '5']
+            
+readingemails:
+    name: Reading Emails
+    desc: None
+    tags:
+        - programming
+    value: 120
+    flageval: no
+    language: python
+    maxlines: 0
+    allowed: 
+        - re
+    delimiter: !!str " "
+    testcases:
+        sample:
+           "": ""
+        input:
+            - ['Joe Smith <email@example.com>']
+            - ['"email"@example.com']
+            - ['firstname+lastname@example.com']
+            - ['email@example.museum']
+            - ['email@example-one.com']
+            - ['email.@example.com']
+            - ['firstname.lastname@example.com']
+            - ['Abc..123@example.com']
+            - ['.email@example.com']
+            - ['email@example.web']
+            - ['1234567890@example.com']
+            - ['email@example.name']
+            - ['firstname-lastname@example.com']
+            - ['email..email@example.com']
+            - ['_______@example.com']
+            - ['email@example.com']
+            - ['email@-example.com']
+            - ['email@example.com (Joe Smith)']
+
+        output:
+            - ['False']
+            - ['False']
+            - ['True']
+            - ['False']
+            - ['False']
+            - ['False']
+            - ['True']
+            - ['True']
+            - ['False']
+            - ['True']
+            - ['True']
+            - ['False']
+            - ['True']
+            - ['True']
+            - ['True']
+            - ['True']
+            - ['True']
+            - ['False']
+
+leapyear:
+    name: Leap Year
+    desc: None
+    tags:
+        - programming
+    value: 100
+    flageval: no
+    language: python
+    maxlines: 1
+    allowed: None
+    delimiter: !!str " "
+    testcases:
+        sample:
+           "": ""
+        input:
+            - [2933]
+            - [636]
+            - [1384]
+            - [2435]
+            - [1108]
+            - [1302]
+            - [2452]
+            - [3315]
+            - [3864]
+            - [1233]
+                        
+        output:
+            - ['False']
+            - ['True']
+            - ['True']
+            - ['False']
+            - ['True']
+            - ['False']
+            - ['True']
+            - ['False']
+            - ['True']
+            - ['False']
+
+tribonnaci:
+    name: Tribonacci Series
+    desc: None
+    tags:
+        - programming
+    value: 90
+    flageval: no
+    language: python
+    maxlines: 0
+    allowed: None
+    delimiter: !!str " "
+    testcases:
+        sample:
+           "": ""
+        input:
+           - ['46']
+           - ['22']
+           - ['23']
+           - ['47']
+           - ['49']
+           - ['41']
+           - ['24']
+           - ['30']
+           - ['30']
+           - ['13']
+        output:
+            - ['8646064']
+            - ['504']
+            - ['504']
+            - ['8646064']
+            - ['8646064']
+            - ['8646064']
+            - ['504']
+            - ['8646064']
+            - ['8646064']
+            - ['504']
+
+minimax:
+    name: Mini Max
+    desc: None
+    tags:
+        - programming
+    value: 40
+    flageval: no
+    language: python
+    maxlines: 0
+    allowed: None
+    delimiter: !!str " "
+    testcases:
+        sample:
+           "": ""
+        input:
+            - ['311 651 992 196 435 180 263']
+            - ['406 942 429 346 481']
+            - ['1014 678 891 30 290 953 548']
+            - ['628 107 1006 1021 96 428 854 992 881 885']
+            - ['723 465 467 63 528']
+            - ['327 592 554 979 715 261 352']
+            - ['199 598 301 149 339 1006 257']
+            - ['344 390 20 132 765']
+            - ['33 318 238 640 632 126']
+            - ['311 257 134 760 575 868']
+            
+        output:
+            - ['2036 2848']
+            - ['1662 2258']
+            - ['3390 4374']
+            - ['5877 6802']
+            - ['1523 2183']
+            - ['2801 3519']
+            - ['1843 2700']
+            - ['886 1631']
+            - ['1347 1954']
+            - ['2037 2771']
+
+equateascii:
+    name: Equate Ascii
+    desc: None
+    tags:
+        - programming
+    value: 50
+    flageval: no
+    language: python
+    maxlines: 0
+    allowed: None
+    delimiter: !!str " "
+    testcases:
+        sample:
+           "": ""
+        input:
+            - ['Allena Anjelica']
+            - ['Tresa Janetta']
+            - ['Franklyn Anjelica']
+            - ['Gerda Joe']
+            - ['Sibyl Lita']
+            - ['Sharda Sharda']
+            - ['Penelope Fallon']
+            - ['Gerda Daysi']
+            - ['Malia Amado']
+            - ['Gerardo Sumiko']            
+            
+        output:
+            - ['False']
+            - ['False']
+            - ['False']
+            - ['False']
+            - ['False']
+            - ['True']
+            - ['False']
+            - ['False']
+            - ['False']
+            
+caesargame:
+    name: Caesar's Game
+    desc: None
+    tags:
+        - programming
+    value: 150
+    flageval: no
+    language: python
+    maxlines: 0
+    allowed: None
+    delimiter: !!str "\n"
+    testcases:
+        sample:
+           "": ""
+        input:
+            - ['14', '1', "I think I'm going crazy."]
+            - ['8', '0', 'What line of work are you in?']
+            - ['24', '0', "That man grabbed the young girl's wrist."]
+            - ['7', '1', "Why don't you have a party?"]
+            - ['8', '0', 'He turned to his friends for help.']
+            - ['14', '1', "Yes, in the afternoon. I have to finish something I'm working on, but I'll be free after 3:30."]
+            - ['3', '1', 'No problem.']
+            - ['11', '0', 'He has a house of his own.']
+            - ['4', '0', "I'll look in the living room."]
+            - ['23', '1', 'Why did they fire him?']
+                   
+            
+        output:
+            - ["U ftuzw U'y sauzs odmlk."]
+            - ['Epib tqvm wn ewzs izm gwc qv?']
+            - ["Rfyr kyl epyzzcb rfc wmsle egpj'q upgqr."]
+            - ["Par whg'm rhn atox t itkmr?"]
+            - ['Pm bczvml bw pqa nzqmvla nwz pmtx.']
+            - ["Kqe, uz ftq mrfqdzaaz. U tmhq fa ruzuet eayqftuzs U'y iadwuzs az, ngf U'xx nq rdqq mrfqd 3:30."]
+            - ['Kl molyibj.']
+            - ['Sp sld l szfdp zq std zhy.']
+            - ["M'pp psso mr xli pmzmrk vssq."]
+            - ['Zkb glg wkhb iluh klp?']
+
+integers:
+    name: Integers
+    desc: None
+    tags:
+        - programming
+    value: 400
+    flageval: no
+    language: c
+    flags:
+        - -v
+    maxlines: 0
+    delimiter: !!str "\n"
+    testcases:
+        sample:
+           "": ""
+        input:
+            - ['3', '2']
+            - ['8', '2']
+            - ['1122566', '16']
+            - ['1378093217', '32']
+            - ['79', '10']
+            - ['414005', '16']
+            - ['169870469', '32']
+            - ['6559122', '16']
+            - ['193682', '12']
+            - ['227183', '10']
+        output:
+            - ['11']
+            - ['1000']
+            - ['112106']
+            - ['1928251']
+            - ['79']
+            - ['65135']
+            - ['520145']
+            - ['641592']
+            - ['94102']
+            - ['227183']
+
+print:
+    name: Print
+    desc: None
+    tags:
+        - programming
+    value: 600
+    flageval: no
+    language: c
+    flags:
+        - -v
+    maxlines: 0
+    allowed: None
+    delimiter: !!str "\n"
+    testcases:
+        sample:
+           "": ""
+        input:
+            - ['hello, world']
+            - ['%s', 'this_is_a_string']
+            - ['%d', '1337']
+            - ['%x', '1337']
+        output:
+            - ['hello, world']
+            - ['this_is_a_string']
+            - ['1337']
+            - ['x539']
+
+
+
+maximusoptimus:
+    name: Maximus Optimus
+    desc: None
+    tags:
+        - programming
+    value: 150
+    flageval: no
+    language: c
+    flags:
+        - -v
+    maxlines: 0
+    allowed: None
+    delimiter: !!str "\n"
+    testcases:
+        sample:
+           "": ""
+        input:
+            - ['3', '4', '5', '3']
+            - ['1', '2', '3', '4']
+            - ['-2', '-3', '-4', '3']
+        output:
+            - ['13']
+            - ['8']
+            - ['-6']
+
+nostring:
+    name: No String
+    desc: None
+    tags:
+        - programming
+    value: 150
+    flageval: no
+    language: c
+    flags:
+        - -v
+    maxlines: 0
+    allowed: None
+    delimiter: !!str "\n"
+    testcases:
+        sample:
+           "": ""
+        input:
+            - ['This is first string', 'This is first string']
+            - ['aaaaaaaaaaaaaaaaaaaaa', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa']
+            - ['ababababababababababababababababababababababababab', 'abcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdef']
+            - ['abcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdef', 'abcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdef']
+            - ['lalalal', 'lal']
+        output:
+            - ['Equal']
+            - ['First']
+            - ['First']
+            - ['Equal']
+            - ['Second']
+
+pointers:
+    name: Pointers Assemble
+    desc: None
+    tags:
+        - programming
+    value: 150
+    flageval: no
+    language: c
+    flags:
+        - -v
+    maxlines: 0
+    allowed: None
+    delimiter: !!str "\n"
+    testcases:
+        sample:
+           "": ""
+        input:
+            - ['5', '25', '45', '89', '15', '82']
+            - ['4', '111', '123', '1337', '23']
+            - ['4', '-1', '-20', '0', '30']
+            - ['6', '1231', '12313', '13213', '111', '-1', '-3213']
+        output:
+            - ['15', '25', '45', '82', '89']
+            - ['23', '111', '123', '1337']
+            - ['-20', '-1', '0', '30']
+            - ['-3213', '-1', '111', '1231', '12313', '13213']
+
+teachersecret:
+    name: Teachers Secrets
+    desc: None
+    tags:
+        - programming
+    value: 150
+    flageval: no
+    language: c
+    flags: 
+        - -v
+    maxlines: 0
+    allowed: None
+    delimiter: !!str "\n"
+    testcases:
+        sample:
+           "": ""
+        input:
+            - ['4', 'red fox lazy dogs', '25 25 25 25', 'the quick brown fox jumped over the lazy dog']
+        output:
+            - ['50']
+
+togetten:
+    name: Toget10
+    desc: None
+    tags:
+        - programming
+    value: 150
+    flageval: no
+    language: c
+    flags: 
+        - -v
+    maxlines: 0
+    allowed: Nonennn
+    delimiter: !!str "\n"
+    testcases:
+        sample:
+           "": ""
+        input:
+            - ['2', '8 9']
+            - ['2', '10 10']
+            - ['4', '5 6 7 8']
+        output:
+            - ['4']
+            - ['0']
+            - ['24']
+
+
+devhack:
+    name: devHack
+    desc: None
+    tags:
+       - hardware
+    value: 150
+    flageval: yes
+    flag: "flag{FLAG=EP}"
+
+7sniff:
+    name: 7sniff
+    desc: None
+    tags: 
+       - hardware
+    value: 250
+    flageval: yes
+    flag: "flag{FLAG=PdLG}"
+
+
+welcomeassembly:
+   name: welcomeassembly
+   desc: None
+   tags:
+      - reverse
+   value: 150 
+   flageval: yes
+   flag: "flag{0x73}"
+
+
+scrabble:
+   name: scrabble
+   desc: None
+   tags:
+      - reverse
+   value: 250
+   flageval: yes
+   flag: "flag{s0m3_m0r3_bit_sh1fTiNg_ad0f0c833}"
+
+
+buggyphp:
+   name: buggyphp
+   desc: None
+   tags:
+      - web
+   value: 250
+   flageval: yes
+   flag: "inctfj{l1f3_1s_e4sy_w1th_PHP}"
+
+
+warmup:
+   name: warmup
+   desc: None
+   tags:
+      - web
+   value: 150
+   flageval: yes
+   flag: "inctfj{7his_15_a_warm_up_challenge}"
+
+
+simplecipher:
+   name: simplecipher
+   desc: None
+   tags:
+      - Crypto
+   value: 250
+   flageval: yes
+   flag: "TWCTF{Crypto_is_fun!}"
+
+
+roxy:
+   name: roxy
+   desc: None
+   tags:
+      - Crypto
+   value: 150
+   flageval: yes
+   flag: "inctfj{R0Xy_1s_Crypt0_R3v3rs3}"
+
+critical:
+   name: critical
+   desc: None
+   tags:
+      - Forensics
+   value: 250
+   flageval: yes
+   flag: "inctf{correcting_all_chunks_gives_the_image}"
+
+overtheshark:
+   name: overthewire
+   desc: None
+   tags:
+      - Forensics
+   value: 150
+   flageval: yes
+   flag: "actf{wireshark_isn't_so_bad_huh-a9d8g99ikdf}"

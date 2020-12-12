@@ -1,0 +1,30 @@
+pundit:
+    server: 787331336813412353
+    adminroles:
+        - Major General
+        - Lieutenant
+    admincategories:
+        - admins
+    playerroles:
+        base: 
+            - 
+                role: Private
+                secret: flag{st4rT_y0ur_j0urn3y_1nt0_7h3_d4rk_w0rld}
+            -
+                role: Private First Class
+                secret: flag{f1gh7_y0ur_w4y_1nt0_7h3_dUnG30n5}
+        roles:
+            500: Sergeant
+            1000: Master Sergeant
+            1500: Sergeant Major
+    mossid: 130091156
+    prefix: !!str "!"
+    token: Nzg3MzMxNDU3NTgzOTM5NTk0.X9TZjw.PTn1oDyD4Kq7uzcCda7haOav-04
+
+storage:
+    master: /tmp/master
+    repo: github.com/theevilsyn/pundit-demo.git
+    token: <git-token>
+    database: pundit
+    db_user: punditadmin
+    db_pass: 729e34d3479c369aafa534cd59123604eea08a4a2f1353f99cf1646ab4d26aebbfe279e32e5b3c17cd3adbc0256f72be
